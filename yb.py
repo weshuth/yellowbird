@@ -44,7 +44,7 @@ def load_LLM(openai_api_key):
 
 st.set_page_config(page_title="yellowbird", page_icon="yellowbird.png")
 st.header("yellowbird")
-
+st.write("check out this [link]")
 col1, col2 = st.columns(2)
 
 with col1:
@@ -53,7 +53,7 @@ with col1:
 with col2:
     st.image(image='yellowbird.png', width=250)
 
-st.markdown("##see the kind of questions yellowbird can answer")
+st.markdown("###see the kind of questions yellowbird can answer")
 
 def get_api_key():
     input_text = st.text_input(label="OpenAI API Key ",  placeholder="Ex: sk-2twmA8tfCb8un4...", key="openai_api_key_input")
