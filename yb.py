@@ -51,7 +51,7 @@ with col1:
     st.markdown("yellowbird is an intelligent Adobe Analytics chatBot used for analysis and implementation. It has awareness of the architecture of an implementation as well as the practical lay-of-the-land code performing the data collection.")
 
 with col2:
-    st.image(image='yellowbird.png', width=500)
+    st.image(image='yellowbird.png', width=100)
 
 st.markdown("##see the kind of questions yellowbird can answer")
 
