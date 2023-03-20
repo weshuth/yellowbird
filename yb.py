@@ -42,21 +42,18 @@ def load_LLM(openai_api_key):
     llm = OpenAI(temperature=.7, openai_api_key=openai_api_key)
     return llm
 
-st.set_page_config(page_title="yellowbird", page_icon=":robot:")
-st.header("Globalize Text")
+st.set_page_config(page_title="yellowbird", page_icon="yellowbird.png")
+st.header("yellowbird")
 
 col1, col2 = st.columns(2)
 
 with col1:
-    st.markdown("Often professionals would like to improve their emails, but don't have the skills to do so. \n\n This tool \
-                will help you improve your email skills by converting your emails into a more professional format. This tool \
-                is powered by [LangChain](https://langchain.com/) and [OpenAI](https://openai.com) and made by \
-                [@GregKamradt](https://twitter.com/GregKamradt). \n\n View Source Code on [Github](https://github.com/gkamradt/globalize-text-streamlit/blob/main/main.py)")
+    st.markdown("yellowbird is an intelligent Adobe Analytics chatBot used for analysis and implementation. It has awareness of the architecture of an implementation as well as the practical lay-of-the-land code performing the data collection.")
 
 with col2:
-    st.image(image='TweetScreenshot.png', width=500, caption='https://twitter.com/DannyRichman/status/1598254671591723008')
+    st.image(image='yellowbird.png', width=500)
 
-st.markdown("## Enter Your Email To Convert")
+st.markdown("##see the kind of questions yellowbird can answer")
 
 def get_api_key():
     input_text = st.text_input(label="OpenAI API Key ",  placeholder="Ex: sk-2twmA8tfCb8un4...", key="openai_api_key_input")
@@ -67,13 +64,13 @@ openai_api_key = get_api_key()
 col1, col2 = st.columns(2)
 with col1:
     option_tone = st.selectbox(
-        'Which tone would you like your email to have?',
-        ('Formal', 'Informal'))
+        'What kind of Adobe question do you have?',
+        ('implementation', 'architecture', 'reporting'))
     
 with col2:
     option_dialect = st.selectbox(
-        'Which English Dialect would you like?',
-        ('American', 'British'))
+        'What document would you like to query?',
+        ('sdr', 'launch'))
 
 def get_text():
     input_text = st.text_area(label="Email Input", label_visibility='collapsed', placeholder="Your Email...", key="email_input")
