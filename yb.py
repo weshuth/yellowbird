@@ -44,7 +44,7 @@ def load_LLM(openai_api_key):
 
 st.set_page_config(page_title="yellowbird", page_icon="yellowbird.png")
 st.header("yellowbird")
-st.write("check out this [linkyellowbird _ whitepaper (1).pdf]")
+st.write("check out this [link]")
 col1, col2 = st.columns(2)
 
 with col1:
